@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: Sales level fact table. Transaction one row per product item ordered.
+    columns:
+      - name: productid
+        description: Degenerate dimension for of the product.
+        tests:
+            - not_null
+      - name: extendedpriceamount
+        description: product of unit price and quantity
+      - name: discountamount
+        description: product of unit price, quantity and discount
+      - name: soldamount
+        description: product of unit price, quantity and (1-discount)
+      - name: quantity
+        description: number of products of each type purchased by a customer
