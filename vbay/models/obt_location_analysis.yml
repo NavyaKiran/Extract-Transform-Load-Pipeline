@@ -1,0 +1,5 @@
+version: 2
+
+models: 
+  - name: obt_location_analysis 
+    description: The location analysis fact table combined with all of its outrigger dimensions into one big table. 

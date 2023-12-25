@@ -1,0 +1,5 @@
+version: 2
+
+models: 
+  - name: obt_sales_prcess 
+    description: The sales process fact table combined with all of its outrigger dimensions into one big table. 

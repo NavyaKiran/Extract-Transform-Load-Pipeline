@@ -1,0 +1,22 @@
+version: 2
+
+models: 
+  - name: fact_sales_process
+    description: One row represents the number of items purchased by a user in a specific geographical area. 
+    columns: 
+      - name: user_id 
+        description: item_buyer_user_id represents the buyer who purchased an item of item_id. 
+        tests: 
+          - not_null
+      - name: user_email
+        description: email id of the user who made the purchase 
+        tests: 
+          - not_null
+      - name: user_zip_code 
+        description: zip code of the user from where the purchase was made (buyer zip code)
+      - name: zip_city
+        description: city associated with the zip code associated with the user id of the buyer. 
+      - name: zip_state
+        description: state associated with the zip code associated with the user id of the buyer. 
+      - name: items_purchased
+        description: The number of items purchased by a user id in a specific zip code

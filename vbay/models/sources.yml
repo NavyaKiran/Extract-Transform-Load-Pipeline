@@ -1,0 +1,59 @@
+version: 2
+
+sources:
+  - name: conformed
+    database: raw
+    schema: conformed
+
+    tables:
+      - name: DateDimension
+        columns:
+          - name: DateKey
+            tests:
+              - unique
+
+  - name: vbay
+    database: raw
+    schema: vbay
+
+    tables:
+      - name: vb_bids
+        columns:
+          - name: bid_id
+            tests:
+              - unique
+      # - name: vb_bid_status_lookup
+      #   columns:
+      #     - name: vb_bids_bid_id
+      #       tests:
+      #         - unique        
+      # - name: vb_item_types_lookup
+      #   columns:
+      #     - name: vb_items_item_id
+      #       tests:
+      #         - unique        
+      - name: vb_items
+        columns:
+          - name: item_id
+            tests:
+              - unique
+      # - name: vb_rating_astypes_lookup
+      #   columns:
+      #     - name: vb_user_ratings_rating_id
+      #       tests:
+      #         - unique
+      - name: vb_user_ratings
+        columns:
+          - name: rating_id
+            tests:
+              - unique      
+      - name: vb_users
+        columns:
+          - name: user_id
+            tests:
+              - unique                                                  
+      - name: vb_zip_codes
+        columns:
+          - name: zip_code
+            tests:
+              - unique

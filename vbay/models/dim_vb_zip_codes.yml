@@ -1,0 +1,15 @@
+version: 2
+models: 
+  - name: dim_vb_zip_codes 
+    description: One row per zip code
+    columns: 
+      - name: zipcodekey 
+        description: The surrogate key for zip code. 
+        tests: 
+          - not_null
+          - unique 
+      - name: zip_code
+        description: THe business/ source key for zip code 
+        tests: 
+          - not_null
+          - unique 
