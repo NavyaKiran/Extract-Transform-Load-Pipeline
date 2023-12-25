@@ -1,0 +1,21 @@
+version: 2
+
+models: 
+  - name: fact_location_analysis
+    description: One row per zip code. Provides the number of users in each zip code and the details associated with the zip code. 
+    columns: 
+      - name: user_zip_code
+        description: Degenerate dimension for location (zip_code)
+        tests: 
+          - unique 
+          - not_null 
+      - name: zip_city 
+        description: The city associated with the zip code. 
+      - name: zip_state
+        description: The state associated with the zip code. 
+      - name: zip_lat 
+        description: The latitude associated with the zip code. 
+      - name: zip_lng
+        description: The longitude associated with the zip code. 
+      - name: number_of_users
+        description: The number of users present in each zip code. 

@@ -1,0 +1,15 @@
+version: 2
+models: 
+  - name: dim_vb_items
+    description: One row per item 
+    columns: 
+       - name: itemkey 
+         description: The surrogate key for item 
+         tests: 
+           - not null 
+           - unique
+       - name: item_id 
+         description: The business/source key for item
+         tests: 
+           - unique 
+           - not null
